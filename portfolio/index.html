@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annpurna Srivastava</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+  /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+/* Body and Background */
+body {
+  background-color: black;
+  line-height: 1.6;
+ 
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #333;
+}
+
+nav .left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: cyan;
+}
+
+/* First Section */
+.firstSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 20px;
+}
+.grey{
+  color:gray;
+}
+
+.leftSection {
+  font-size: 2rem;
+  max-width: 500px;
+  text-align: center;
+}
+
+.rightSection img {
+  width: 300px;
+  border-radius: 10%;
+}
+
+/* Section Titles */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  color: cyan;
+}
+
+/* Card Style */
+.details-container,
+.project-row {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Project Cards */
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.project-image {
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.project-text {
+  flex: 1;
+}
+
+/* Buttons */
+.btn1, .btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background: cyan;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn1:hover, .btn:hover {
+  background: #00b3b3;
+}
+
+/* Contact Form */
+form {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+.hamburger {
+  display: none;
+}
+
+
+/* Footer */
+footer {
+  background: #333;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+   cursor: pointer;
+}
+.navlinks:hover{
+  background-color: #00b3b3;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+  <div class="logo">Annpurna's Portfolio</div>
+    <div class="hamburger" id="hamburger">
+      <img src="hamburger.svg" width="20px">
+    </div>
+  <div class="nav-links">
+    <a onclick="location.href='#firstSection'">Home</a>
+    <a onclick="location.href='#aboutSection'">About</a>
+    <a onclick="location.href='#projects'">Projects</a>
+    <a onclick="location.href='#contact'">Contact</a>
+ 
+  </div>
+</nav>
+    </header>
+    <main>
+        <section class="firstSection" id="firstSection">
+            <div class="leftSection">
+               Hi, I am <span class="blue">Annpurna Srivastava</span>
+                <div>
+         <strong><span id="element"></span></strong>
+        </div>
+      <p class="grey">
+  Full Stack Web Developer (Secondary Skill)
+       </p>
+                  
+            </div>
+              <div class="rightSection">
+                <img src="bg.jpeg" alt="Annpurna Srivastava" style="width: 60%; height: auto;margin:50px 0;border-radius: 10%;">
+              </div>
+        </section>
+
+         <section class="aboutSection" id="aboutSection">
+      <h1>About Me</h1>
+     
+     <p>
+I completed my graduation from <span class="skill">JIS University, Kolkata</span> with a
+B.Tech in <span class="skill">Computer Science & Engineering (CSE)</span> and an average
+CGPA of <strong class="skill">8.83</strong>.
+Currently, I specialize in <strong class="skill">Data Analytics</strong>, with hands-on experience in
+data analysis, visualization, and working with real-world datasets.
+I also have experience as a <span class="skill">Full Stack Developer</span>, with working knowledge of the
+<span class="skill">MERN Stack (MongoDB, Express.js, React.js, Node.js)</span>, which complements my analytics
+skills by providing a strong understanding of backend systems and data flow.
+</p>
+
+      
+      <br/>
+
+   <span class="grey" >Get to know me</span>
+      <h1>More</h1>
+    <p>
+I am a <strong class="skill">Data Analyst</strong> and Computer Science graduate
+(B.Tech – CSE) from <span class="skill">JIS University, Kolkata</span>
+with a CGPA of <strong class="skill">8.83</strong>.
+I have hands-on experience analyzing real-world datasets (up to
+<strong class="skill">250K+ records</strong>), building interactive dashboards
+using <strong class="skill">Power BI, SQL, AWS, Snowflake</strong>, and leveraging <strong class="skill">GenAI</strong> tools for data-driven insights.
+</p>
+
+<p>
+Alongside analytics, I also have experience as a
+<span class="skill">Full Stack Web Developer</span>, which helps me understand data
+from backend systems, APIs, and user-driven applications.
+I am actively seeking <strong>entry-level Data Analyst roles</strong> where I can combine
+analytics, cloud technologies, and GenAI to solve real-world problems.
+</p>
+
+
+
+      <div>
+         
+      </div>
+        <br/>
+      <div class="Education">
+<img src="school.svg" alt="Education" class="icon">
+        <h2>Education</h2>
+      <div class="section-container">
+<div class="about-details-container">
+  <div class="about-containers">
+    <div class="details-container">
+      <h3>School Education</h3>
+      <p>Secondary (10th)
+Shri Pratap Memorial Convent School, Udhampur, Jammu and Kashmir
+2018 | Percentage: 83.6%
+</p>
+<p>Senior Secondary (12th)
+NITL Higher Secondary School, Udhampur, Jammu and Kashmir
+2020 | Percentage: 72.6%
+</p>
+    </div>
+
+       <div class="details-container">
+      <h3>College Education</h3>
+     <p>Bachelor of Technology in Computer Science</p> 
+<p>JIS University, Kolkata, West Bengal |
+Graduated in 2025| Average CGPA:8.83</p>
+    </div>
+  </div>
+</div>
+      </div>
+      </div>
+    <div class="Skills">
+  <img src="skill.svg" alt="Skills Icon" class="icon">
+  <h2>Skills</h2>
+  <div class="section-container">
+    <div class="about-details-container">
+      <div class="about-containers">
+       <div class="details-container">
+  <h3>Data Analyst Skills (Primary)</h3>
+  <p><strong>BI & Visualization:</strong> Power BI,Tableau, Excel,Gen AI</p>
+  <p><strong>Data Analysis and Statistics:</strong> Data Cleaning, EDA, Data Modeling</p>
+  <p><strong>Databases:</strong> MySQL, MongoDB</p>
+  <p><strong>Cloud & Warehousing:</strong> AWS (S3), Snowflake</p>
+</div>
+
+<div class="details-container">
+  <h3>MERN Stack (Secondary)</h3>
+  <p><strong>Frontend:</strong> HTML, CSS, Tailwind CSS, React.js</p>
+  <p><strong>Backend:</strong> Node.js, Express.js</p>
+  <p><strong>APIs & Auth:</strong> REST APIs, JWT, Firebase,API Integration</p>
+  <p><strong>Tools:</strong> Git, GitHub, Postman, Vercel</p>
+  <p><strong>Devops:</strong> Docker</p>
+  
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Experience">
+  <img src="work.svg" alt="Work Icon" class="icon">
+  <h2>Work Experience</h2>
+  <div class="section-container">
+    <div class="about-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h3>Web Development Intern</h3>
+          <p><strong>Company:</strong> Unified Mentor</p>
+          <p><strong>Duration:</strong> June 2025 – Present</p>
+          <p><strong>Location:</strong> Remote</p>
+          <p>
+<p>Learning how to build real-world web applications using the latest technologies like React, Node.js, and MongoDB. Gaining hands-on experience in responsive design, Git, and deployment tools </p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1 class="projects" id="projects">Projects</h1>
+  <p>Hello! I’m <span class="blue">Annpurna Srivastava</span>. Here are some of my featured projects:</p>
+
+  <!-- Project 1 -->
+  <div class="project-row">
+    <img src="Loan Data.png" alt="Loan Data Analysis Project" class="project-image" />
+    <div class="project-text">
+      <h3>Loan Data Analysis</h3>
+      <p>
+        •	Analyzed 255K+ loan records in Power BI to uncover trends in loan distribution, credit scores, and default behavior.
+       •	Developed interactive dashboards using DAX (AVERAGEX, FILTER, MEDIANX, COUNTROWS, ISBLANK, CALCULATE, ALLEXCEPT, ALL, SUMX, DIVIDE, SUM), Measures to track default rates, average loan amounts, and YOY performance.
+       •	Identified high-risk borrower segments by analyzing income, employment type, age, and credit score patterns.
+      </p>
+      
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="project-row">
+    <img src="Chatnova.png" alt="Chatnova Project" class="project-image" />
+    <div class="project-text">
+      <h3>ChatGPT Clone – Chat Nova</h3>
+     •	Developed a ChatGPT-style AI chat application using React, Node.js, MongoDB, and Tailwind CSS, integrating the Gemini API for real-time intelligent responses.
+     •	Implemented user authentication, Google sign-in, chat history, voice mode, dictation, copy/share chat options, and a Razorpay-powered credits system.
+     •	Added features like community image sharing, dark/light mode, responsive UI, conversation search, and create-chat functionality to enhance user experience.
+     •	Optimized the frontend to achieve Lighthouse scores of 70+ (Performance 74, Accessibility 62, Best Practices 100, SEO 92).
+
+      
+    </div>
+   
+
+  </div>
+    </section>
+    </main>
+    <div class="container">
+     <h2 class="contact" id="contact">Contact Me</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" />
+        <div class="error" id="nameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" />
+        <div class="error" id="emailError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" />
+        <div class="error" id="subjectError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" rows="4"></textarea>
+        <div class="error" id="messageError"></div>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+    <footer>
+        <div class="flex">
+
+            <div class="footer">Annpurna's Portfolio||All rights Reserved</div>
+           
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+      <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+  strings: [
+    'Data Analyst',
+    'Power BI | SQL | Statistics| GenAI'
+  ],
+  typeSpeed: 60,
+  backSpeed: 40,
+  loop: true
+});
+  </script>
+  <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let isValid = true;
+
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const subject = document.getElementById('subject');
+      const message = document.getElementById('message');
+
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const subjectError = document.getElementById('subjectError');
+      const messageError = document.getElementById('messageError');
+
+      nameError.textContent = emailError.textContent = subjectError.textContent = messageError.textContent = '';
+
+      if (name.value.trim() === '') {
+        nameError.textContent = 'Name is required';
+        isValid = false;
+      }
+
+      if (email.value.trim() === '') {
+        emailError.textContent = 'Email is required';
+        isValid = false;
+      } else if (!/\S+@\S+\.\S+/.test(email.value)) {
+        emailError.textContent = 'Email format is invalid';
+        isValid = false;
+      }
+
+      if (subject.value.trim() === '') {
+        subjectError.textContent = 'Subject is required';
+        isValid = false;
+      }
+
+      if (message.value.trim() === '') {
+        messageError.textContent = 'Message is required';
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Form submitted successfully!");
+     
+        document.getElementById("contactForm").reset();
+      }
+    });
+    
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+
+  </script>
+</body>
+</html>
