@@ -1,0 +1,58 @@
+
+.nav-left{
+    font-size: 20px;
+}
+
+.max-width-1 {
+    max-width: 80vw;
+}
+
+.max-width-2 {
+    max-width: 60vw;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.form-input{
+    padding: 0px 5px;
+    padding-top: 3px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin: 0 13px;
+    font-family: var(--font1);
+}
+.btn{
+    padding: 0px 15px;
+    padding-top: 3px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-family: var(--font1);
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.btn:hover{
+    color:white;
+    background-color: var(--main-bg-color);
+}
+.mx-1{
+    margin-left: 23px;
+    margin-right: 23px;
+}
+.my-2{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.form-box input ,textarea{
+    width: 52vw;
+    padding: 0px 6px;
+    margin: 7px 0px;
+    font-size: 18px;
+    font-family: var(--font1);
+    border: 5px saddlebrown ;
+    border-radius: 10px;
+
+}
